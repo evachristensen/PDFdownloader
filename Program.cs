@@ -12,14 +12,9 @@ List<Link> logLinks = new List<Link>();
 readLinks = cSVprocessor.ReadCSV("GRI_2017_2020.csv");
 logLinks = cSVprocessor.ReadCSV("log.csv");
 
-//checking if log is empty, and if it is then we set it equal to the list to download
-if (reset.IsLogEmpty(logLinks, readLinks)){ //can I combine this with ResetLog()?
-    logLinks = readLinks;
-}
-
-//ask if the user wants to reset the log
+//ask if the user wants to reset the log and checking if log is empty
 bool willReset = reset.PromptReset();
-if (willReset){
+if (willReset || reset.IsLogEmpty(logLinks, readLinks)){
     logLinks = reset.ResetLog(readLinks);
 }
 
