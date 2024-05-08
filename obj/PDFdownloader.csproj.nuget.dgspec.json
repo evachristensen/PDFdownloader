@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Eva Christensen\\Documents\\ExOpi kursus\\Projekt 7 - PDF Downloader\\PDFdownloader\\PDFdownloader\\PDFdownloader.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Eva Christensen\\Documents\\ExOpi kursus\\Projekt 7 - PDF Downloader\\PDFdownloader\\PDFdownloader\\PDFdownloader.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eva Christensen\\Documents\\ExOpi kursus\\Projekt 7 - PDF Downloader\\PDFdownloader\\PDFdownloader\\PDFdownloader.csproj",
+        "projectName": "PDFdownloader",
+        "projectPath": "C:\\Users\\Eva Christensen\\Documents\\ExOpi kursus\\Projekt 7 - PDF Downloader\\PDFdownloader\\PDFdownloader\\PDFdownloader.csproj",
+        "packagesPath": "C:\\Users\\Eva Christensen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eva Christensen\\Documents\\ExOpi kursus\\Projekt 7 - PDF Downloader\\PDFdownloader\\PDFdownloader\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Eva Christensen\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[32.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

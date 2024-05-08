@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BEDhcG9/fHjYUE95X58RmHa2TKmRQ9es234oEXHYF522XFWFEAIVyaVwSTAYko5xoWHGzcqWlOkybrgnLxtsYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Eva Christensen\\Documents\\ExOpi kursus\\Projekt 7 - PDF Downloader\\PDFdownloader\\PDFdownloader\\PDFdownloader.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Eva Christensen\\.nuget\\packages\\csvhelper\\32.0.1\\csvhelper.32.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
