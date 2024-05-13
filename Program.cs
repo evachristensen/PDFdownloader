@@ -18,9 +18,4 @@ if (willReset || reset.IsLogEmpty(logLinks, readLinks)){
     logLinks = reset.ResetLog(readLinks);
 }
 
-foreach (Link l in logLinks)
-{
-    Console.WriteLine(l.id.ToString() + l.pdf_url_1);
-}
-
 logLinks = downloader.DownloadPDFs(readLinks, logLinks);

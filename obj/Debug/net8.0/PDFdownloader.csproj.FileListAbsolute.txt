@@ -15,3 +15,17 @@ C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdo
 C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\obj\Debug\net8.0\PDFdownloader.pdb
 C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\obj\Debug\net8.0\PDFdownloader.genruntimeconfig.cache
 C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\obj\Debug\net8.0\ref\PDFdownloader.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\obj\Debug\net8.0\PDFdownloader.sourcelink.json
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Eva Christensen\Documents\ExOpi kursus\Projekt 7 - PDF Downloader\PDFdownloader\PDFdownloader\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
