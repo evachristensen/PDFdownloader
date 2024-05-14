@@ -7,7 +7,7 @@ namespace PDFdownloader
 {
     public class Reset
     {
-        public bool IsLogEmpty(List<Link> log, List<Link> readList)
+        public bool IsLogEmpty(List<Log> log, List<Link> readList)
         {
             if (log.Count() == readList.Count())
             {
@@ -15,6 +15,7 @@ namespace PDFdownloader
             }
             else
             {
+                Console.WriteLine("Log is empty. Resetting log...");
                 return true;
             }
 
@@ -31,17 +32,23 @@ namespace PDFdownloader
                     Console.WriteLine("Resetting log...");
                     return true;
                 case "n":
-                    Console.WriteLine("Not resetting log.");
                     return false;
             }
             return false;
         }
 
-        public List<Link> ResetLog(List<Link> l)
+        public List<Log> ResetLog(List<Link> linkList)
         {
+            List<Log> resetList = new();
+            
+            foreach (Link l in linkList){
+                Log i = new Log{id = l.id, downloadStatus = ""};
+                resetList.Add(i);
+            }
             Console.WriteLine("Log reset.");
-            return l;
+            return resetList;
         }
+
         public string? ReadUserInput()
         {
             try

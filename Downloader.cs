@@ -10,53 +10,88 @@ namespace PDFdownloader
 {
     public class Downloader
     {
-        public List<Link> DownloadPDFs(List<Link> downloadLinks, List<Link> logLinks)
+        public List<Log> DownloadPDFs(List<Link> downloadLinks, List<Log> logLinks)
         {
-            List<Link> newLogLinks = logLinks;
+            List<Log> newLogLinks = logLinks;
             //loop through list
             foreach (Link l in downloadLinks)
             {
-                int id = l.id;
-                if (logLinks[id].downloadStatus == "")
+                int myID = l.id;
+                if (logLinks[myID - 1].downloadStatus == null){
+                    Log i = new Log{id = myID, downloadStatus = ""};
+                    logLinks[myID - 1] = i;
+                }
+                
+                string downloadStatus = logLinks[myID - 1].downloadStatus;
+                
+                if (logLinks[myID - 1].downloadStatus == "")
                 {
-                    //try to download 1
-                    using (WebClient client = new())
+                    Console.WriteLine("getting file " + logLinks[myID - 1].id);
+                    using (WebClient client = new()) //using webclient even though it may give me issues. I might try using Ihhtpfactory
                     {
                         int attempt = 1;
+
                         try
                         {
-                            client.DownloadFile(l.pdf_url_1, "./pdfs/" + id + "B.pdf");
-                            newLogLinks[id].downloadStatus = "B";
-                            Console.WriteLine("Attempt " + attempt + " downloaded pdf " + id);
+                            var result = client.DownloadData(l.pdf_url_1);
+                            string? contentType = client.ResponseHeaders["Content-Type"];
+
+                            if (contentType == "application/pdf")
+                            {
+                                client.DownloadFile(l.pdf_url_1, "./pdfs/" + myID + "B.pdf");
+                                newLogLinks[myID-1].downloadStatus = "B";
+                                Console.WriteLine("Attempt " + attempt + " downloaded pdf " + myID);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Attempt " + attempt + " failed to download pdf " + myID);
+                                newLogLinks[myID-1].downloadStatus = "";
+                                attempt = 2;
+                                throw new ArgumentException("Filetype must be PDF");
+                            }
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine("Attempt " + attempt + " failed to download pdf " + id);
+                            Console.WriteLine("Attempt " + attempt + " failed to download pdf " + myID);
                             Console.WriteLine(e.Message);
-                            newLogLinks[id].downloadStatus = "";
+                            newLogLinks[myID-1].downloadStatus = "";
                             attempt = 2;
+                        }
 
+                        if (attempt == 2)
+                        {
                             try
                             {
-                                client.DownloadFile(l.pdf_url_2, "./pdfs/" + id + "C.pdf");
-                                newLogLinks[id].downloadStatus = "C";
-                                Console.WriteLine("Attempt " + attempt + " downloaded pdf " + id);
+                                var result = client.DownloadData(l.pdf_url_2);
+                                var contentType = client.ResponseHeaders["Content-Type"];
+
+                                if (contentType == "application/pdf")
+                                {
+                                    client.DownloadFile(l.pdf_url_2, "./pdfs/" + myID + "C.pdf");
+                                    newLogLinks[myID-1].downloadStatus = "C";
+                                    Console.WriteLine("Attempt " + attempt + " downloaded pdf " + myID);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Attempt " + attempt + " failed to download pdf " + myID);
+                                    newLogLinks[myID-1].downloadStatus = "";
+                                    throw new ArgumentException("Filetype must be PDF");
+                                }
                             }
                             catch (Exception f)
                             {
-                                Console.WriteLine("Attempt " + attempt + " failed to download pdf " + id);
+                                Console.WriteLine("Attempt " + attempt + " failed to download pdf " + myID);
                                 Console.WriteLine(f.Message);
-                                newLogLinks[id].downloadStatus = "";
-
+                                newLogLinks[myID-1].downloadStatus = "";
                             }
                         }
                     }
 
                 }
 
-                //try to download 2
-                //if download is successful, then update logLinks
-
+            }
+            foreach (Log a in newLogLinks){
+                Console.WriteLine("id: " + a.id + ", download status " + a.downloadStatus);
             }
             return newLogLinks;
         }

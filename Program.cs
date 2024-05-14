@@ -6,16 +6,37 @@ Reset reset = new Reset();
 
 CSVprocessor cSVprocessor = new CSVprocessor();
 List<Link> readLinks = new List<Link>();
-List<Link> logLinks = new List<Link>();
+List<Log> logLinks = new List<Log>();
 
 //Reading the files
-readLinks = cSVprocessor.ReadCSV("GRI_2017_2020.csv");
-logLinks = cSVprocessor.ReadCSV("log.csv");
+readLinks = cSVprocessor.ReadLinkCSV("GRI_2017_2020.csv");
+logLinks = cSVprocessor.ReadLogCSV("log.csv");
 
 //ask if the user wants to reset the log and checking if log is empty
 bool willReset = reset.PromptReset();
-if (willReset || reset.IsLogEmpty(logLinks, readLinks)){
+if (willReset || reset.IsLogEmpty(logLinks, readLinks))
+{
     logLinks = reset.ResetLog(readLinks);
 }
 
-logLinks = downloader.DownloadPDFs(readLinks, logLinks);
+Download();
+
+cSVprocessor1.WriteCSV("log.csv", logLinks);
+
+void Download()
+{
+    Console.WriteLine("Would you like to download? Y/N");
+    string? dl = reset.ReadUserInput();
+
+    switch (dl)
+    {
+        case "y":
+            Console.WriteLine("downloading...");
+            logLinks = downloader.DownloadPDFs(readLinks, logLinks);
+            break;
+        case "n":
+            Console.WriteLine("nope");
+            break;
+    }
+}
+
