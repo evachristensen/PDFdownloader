@@ -5,11 +5,32 @@ Downloader downloader = new Downloader();
 Reset reset = new Reset();
 
 CSVprocessor cSVprocessor = new CSVprocessor();
-List<Link> readLinks = new List<Link>();
-List<Log> logLinks = new List<Log>();
+List<Link> readLinks = new();
+List<Log> logLinks = new();
+
+//choosing which file to read from
+string? CSVname = "GRI_2017_2020.csv";
+// if (reset.ReadUserInput() )
+// {
+//     string? CSVname = reset.ReadUserInput();
+//     try
+//     {
+//         string? userInput = "";
+//         while (userInput == "")
+//         {
+//             userInput = Console.ReadLine();
+//         }
+        
+//     }
+//     catch (Exception e)
+//     {
+//         Console.WriteLine(e.Message);
+        
+//     }
+// }
 
 //Reading the files
-readLinks = cSVprocessor.ReadLinkCSV("GRI_2017_2020.csv");
+readLinks = cSVprocessor.ReadLinkCSV(CSVname);
 logLinks = cSVprocessor.ReadLogCSV("log.csv");
 
 //ask if the user wants to reset the log and checking if log is empty
@@ -32,7 +53,7 @@ void Download()
     {
         case "y":
             Console.WriteLine("downloading...");
-            logLinks = downloader.DownloadPDFs(readLinks, logLinks);
+            logLinks = downloader.DownloadPDFs(readLinks, logLinks).Result;
             break;
         case "n":
             Console.WriteLine("nope");

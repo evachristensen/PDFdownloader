@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PDFdownloader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ddf2fbe5b5124a2fd0c8bb7c7a6570c994b187f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+249d5b6dafe9b37fd2ee0448f8e62bb16595fd6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PDFdownloader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PDFdownloader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
